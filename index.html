@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EMPLEADOS</title>
+	<link rel="stylesheet" type="text/css" href="css/mdb.min.css">
+	<!-- Font Awesome -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	  rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+	  rel="stylesheet"
+	/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/stilos.css">
+
+
+
+
+
+
+</head>
+<body>
+
+<div align="center">
+	
+	<div class="container" >
+		
+
+		<div align="left" class="row" >
+
+
+			<div class="col-5" > 
+      
+				
+<div id="b1" class="container" align="left">
+				<div align="center" class="card" >
+ <h1>SISTEMA DE EMPLEADOS</h1>
+				  <img src="https://radionotas.com/wp-content/uploads/2022/03/bigstock-Together-In-Business-As-A-Team-420036952-696x696.jpg"  class="card-body" alt="neg" align="center" width="320" height="320"/>
+
+                 
+ </div>
+				  <div class="card-body" align="left" >
+                  <div id="b2" class="container" align="left">
+                  
+				    <h5 class="card-title">Datos Personales: </h5>
+				    <p align="left">Nombre:     <input type="text"  name="nombre" id="nombre"/></p>
+				    <p>Apellido:<input type="text"  name="nombre"id="apellido"/> </p>
+				    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <select class="select" id="sexo" name="sexo">
+                          <option disabled selected>
+                            Sexo
+                          </option>
+                          <option value="1">Masculino</option>
+                          <option value="2">Femenino</option>
+                        </select>
+                      </div>
+                    
+				   
+				     <p>Fecha de Nacimiento:&nbsp &nbsp<input type="date" id="fechaNacimiento" min="1930-01-01" max="2016-12-31">
+                     <h1 id="edad"></h1>
+				     <p>Fecha de Ingreso:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="date" name="nombre"id="ingreso" max="2022-09-12"/></p>
+				    <p>Salario: <input type="text" name="nombre"id="salario"/> <button class="btn btn-secondary" onclick="salario()"> Modificar</button> </p>
+				 </div>
+
+<div class="container py-0">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col">
+           
+                  
+                  
+                <br>
+                <br>
+               
+                <div class="row">
+                  <div class="col-md-6 mb-4"> 
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-success btn-lg ms-2" id="calculaEdad" 
+                    style="background-color:hsl(210, 100%, 50%)" onclick="calEdad()">Calcular Edad <input type="text"  name="nombre" id="ed"/></button>
+                    </div>
+                   
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <input type="number" id="cal_edad" name="cal_edad" class="form-control form-control-lg"></input>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row" align="center">
+                  <div class="col-md-6 mb-4" >
+                    <div class="d-flex justify-content-end" align="center">
+                      <button type="button" class="btn btn-success btn-lg ms-2" id="calculaAnti"
+                    style="background-color:hsl(210, 100%, 50%)"  onclick="calAntiguedad()">Calcular AntigÜedad <input type="text"  name="nombre" id="Ant"  /></button>
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <input type="number" id="cal_anti" name="cal_anti" class="form-control form-control-lg"></input>
+                    </div>
+                </div>
+                </div>
+
+                
+                <div class="row" >
+                  <div class="col-md-6 mb-4">
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-success btn-lg ms-2" id="calculaPres"
+                    style="background-color:hsl(210, 100%, 50%)" onclick="calPrestaciones()">Calcular Prestaciones <input type="text"  name="nombre" id="pres"/></button>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <input type="number" id="cal_pres" name="cal_pres" class="form-control form-control-lg"></input>
+                    </div>
+                  </div>
+                </div> </div> 
+              </div>
+            </div> </div>
+          </div>      
+        </div>
+      </div>
+		</div>
+    </div>
+
+
+
+	
+</body>
+</html>
