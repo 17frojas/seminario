@@ -91,17 +91,9 @@ class Empleado{
 		return this.calculoPrestaciones;
 	}
 
-	darCalculoSAnual(){
-		return this.calculoSAnual;
-	}
+	
 
-	darCalculoPrima(){
-		return this.calculoPrima;
-	}
-
-	darCalculoPrimav(){
-		return this.calculoPrimav;
-	}
+	
 
 	csalario(sal){
 		this.salario = sal;
@@ -212,37 +204,7 @@ function calAntiguedad(){
     document.getElementById('cal_anti').value = a;
 }
 
-function calPrestaciones(){
-	let psal = document.getElementById("salario").value;
-	let pant = document.getElementById("cal_anti").value;
-	cal.calcularPrestaciones(psal, pant);
-	const p = cal.darEmpleado().darCalculoPrestaciones();
-	document.getElementById('cal_pres').value = p;
-}
 
-function calSalAnual(){
-	let sanualsal = document.getElementById("salario").value;
-	cal.calcularSAnual(sanualsal);
-	const sa = cal.darEmpleado().darCalculoSAnual();
-	document.getElementById('cal_sanual').value = sa;
-}
 
-function calPrima(){
-	if(document.getElementById('todosD').checked){
-		let prima = document.getElementById("salario").value;
-		cal.calcularPrima(prima);
-		const pr = cal.darEmpleado().darCalculoPrima();
-		document.getElementById('cal_prima').value = pr;
-	}
-
-	if(document.getElementById('porD').checked){
-		let prima2 = document.getElementById("salario").value;
-		let prisal = 0;
-		prisal = document.getElementById('diasTra').value;
-		cal.calcularPrim(prima2, prisal);
-		const pr2 = cal.darEmpleado().darCalculoPrimav();
-		document.getElementById('cal_prima').value = pr2;
-	}
-}
 
 
