@@ -20,10 +20,6 @@
 	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
 	  rel="stylesheet"
 	/>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<script type="text/javascript" src="js/mdb.min.js"></script>
-	<script type="text/javascript" src="js/funciones.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/stilos.css">
 
 
 
@@ -33,31 +29,42 @@
 </head>
 <body>
 
-<div align="center">
-	
-	<div class="container" >
-		
+<section style="background-color: dimgrey;">
+    <div class="container" align="center">
 
-		<div align="left" class="row" >
-
-
-			<div class="col-5" > 
+      <br>
       
-				
-<div id="b1" class="container" align="left">
-				<div align="center" class="card" >
- <h1>SISTEMA DE EMPLEADOS</h1>
-				  <img src="https://radionotas.com/wp-content/uploads/2022/03/bigstock-Together-In-Business-As-A-Team-420036952-696x696.jpg"  class="card-body" alt="neg" align="center" width="320" height="320"/>
+    </div>
 
                  
- </div>
-				  <div class="card-body" align="left" >
-                  <div id="b2" class="container" align="left">
-                  
-				    <h5 class="card-title">Datos Personales: </h5>
-				    <p align="left">Nombre:     <input type="text"  name="nombre" id="nombre"/></p>
-				    <p>Apellido:<input type="text"  name="nombre"id="apellido"/> </p>
-				    <div class="row">
+<div> 
+
+              <div class="container py-3">
+
+                <div class="row d-flex justify-content-center align-items-center">
+                  <div class="col">
+                    <div class="card my-4 shadow-3">
+                      <div class="row g-0">
+                        <div class="col-xl-6">
+                          <div class="card-body p-md-5 text-black">
+                            <h2>Sistema de Empleados</h2>
+                            <h5 class="mb-4 text-uppercase">Datos peronales</h5>
+                            <div class="row">
+
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" />
+                                  <label class="form-label" for="nombre">Nombre</label>
+                                </div>
+                              </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="apellido" name="apellido" class="form-control form-control-lg" />
+                          <label class="form-label" for="apellido">Apellido</label>
+                        </div>
+                      </div>
+                    </div>
+                       <div class="row">
                       <div class="col-md-6 mb-4">
                         <select class="select" id="sexo" name="sexo">
                           <option disabled selected>
@@ -67,30 +74,64 @@
                           <option value="2">Femenino</option>
                         </select>
                       </div>
-                    
-				   
-				     <p>Fecha de Nacimiento:&nbsp &nbsp<input type="date" id="fechaNacimiento" min="1930-01-01" max="2016-12-31">
-                     <h1 id="edad"></h1>
-				     <p>Fecha de Ingreso:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="date" name="nombre"id="ingreso" max="2022-09-12"/></p>
-				    <p>Salario: <input type="text" name="nombre"id="salario"/> <button class="btn btn-secondary" onclick="salario()"> Modificar</button> </p>
-				 </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="date" id="nacimiento" name="nacimiento" class="form-control form-control-lg" size="30" value="" />
+                      <label class="form-label" for="nacimiento">Fecha de Nacimiento</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="date" id="ingreso" name="ingreso" class="form-control form-control-lg" size="30" value="" />
+                      <label class="form-label" for="ingreso">Fecha de Ingreso</label>
+                    </div>
+                    <hr />
+                    <br>
+                    <h5 class="mb-4 text-uppercase">Salario</h5>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="number" id="salario" name="salario" class="form-control form-control-lg"></input>
+                          <label class="form-label" for="salario">Ingrese el salario</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="d-flex justify-content-end">
+                          <button type="button" class="btn btn-success btn-lg ms-2" id="modificar" 
+                        style="background-color:hsl(210, 100%, 50%)" onclick="salarioM()">Modificar Salario</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-<div class="container py-0">
+
+                <div class="col-xl-6 d-xl-block bg-image">
+                  <img src="https://e7.pngegg.com/pngimages/456/422/png-clipart-cartoon-service-employees-and-work-permits-company-boy.png" align="href" width="400" height="300"
+                    class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container py-0">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col">
-           
+            <div class="card my-2 shadow-3">
+              <div class="card-body p-md-4 text-black">
+                <div class="d-flex align-items-center">
                   
-                  
+                  </div>
+                </div>
                 <br>
-                <br>
-               
+                <h5>CALCULOS</h5>
                 <div class="row">
-                  <div class="col-md-6 mb-4"> 
+                  <div class="col-md-6 mb-4">
                     <div class="d-flex justify-content-end">
-                      <button type="button" class="btn btn-success btn-lg ms-2" id="calculaEdad" 
-                    style="background-color:hsl(210, 100%, 50%)" onclick="calEdad()">Calcular Edad <input type="text"  name="nombre" id="ed"/></button>
+                      <button type="button" class="btn btn-success btn-lg ms-2" id="calEdad" 
+                    style="background-color:hsl(210, 100%, 50%)" onclick="calEdad ()">Calcular Edad</button>
                     </div>
-                   
                   </div>
                   <div class="col-md-3 mb-4">
                     <div class="form-outline">
@@ -98,29 +139,24 @@
                     </div>
                   </div>
                 </div>
-                <br>
-                <div class="row" align="center">
-                  <div class="col-md-6 mb-4" >
-                    <div class="d-flex justify-content-end" align="center">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="d-flex justify-content-end">
                       <button type="button" class="btn btn-success btn-lg ms-2" id="calculaAnti"
-                    style="background-color:hsl(210, 100%, 50%)"  onclick="calAntiguedad()">Calcular AntigÜedad <input type="text"  name="nombre" id="Ant"  /></button>
+                    style="background-color:hsl(210, 100%, 50%)" onclick="calAntiguedad()">Calcular AntigÜedad</button>
                     </div>
                   </div>
-
-                  
                   <div class="col-md-3 mb-4">
                     <div class="form-outline">
                       <input type="number" id="cal_anti" name="cal_anti" class="form-control form-control-lg"></input>
                     </div>
+                  </div>
                 </div>
-                </div>
-
-                
-                <div class="row" >
+                <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="d-flex justify-content-end">
                       <button type="button" class="btn btn-success btn-lg ms-2" id="calculaPres"
-                    style="background-color:hsl(210, 100%, 50%)" onclick="calPrestaciones()">Calcular Prestaciones <input type="text"  name="nombre" id="pres"/></button>
+                    style="background-color:hsl(210, 100%, 50%)" onclick="calPrestaciones()">Calcular Prestaciones</button>
                     </div>
                   </div>
                   <div class="col-md-3 mb-4">
@@ -128,17 +164,30 @@
                       <input type="number" id="cal_pres" name="cal_pres" class="form-control form-control-lg"></input>
                     </div>
                   </div>
-                </div> </div> 
+
+                  <table border="1" id="tabla4">
+  <br>
+     <h5>Puntos de extensión</h5>
+    <td><br>
+      <input type="button" name="boton_3" id="boton_3"
+        value="&nbsp;Opción 1"> 
+        &nbsp;&nbsp;<input type="button" name="boton_3" id="boton_3"
+        value="&nbsp;Opción 2"> 
+        <br><br>
+    </td>
+                </div>
               </div>
-            </div> </div>
+            </div>
           </div>      
         </div>
       </div>
-		</div>
-    </div>
 
 
 
-	
-</body>
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/funciones.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/stilos.css">
+
 </html>
