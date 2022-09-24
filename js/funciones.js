@@ -1,9 +1,10 @@
-class Calculos{
+class Funcion{
 	constructor(){
-		this.emp = new Empleado;
+
+		this.emp = new Datos;
 	}
 
-	darEmpleado(){
+	darDatos(){
 		return this.emp;
 	}
 
@@ -11,47 +12,33 @@ class Calculos{
 		this.emp.csalario(sal);
 	}
 
-	calcularEdad(anoN,mesN,diaN,anoA,mesA,diaA){
-		this.emp.cedad(anoN,mesN,diaN,anoA,mesA,diaA);
+	calcularEdad(ano1,mes1,dia1,ano2,mes2,dia2){
+		this.emp.cedad(ano1,mes1,dia1,ano2,mes2,dia2);
 	}
 
-	calcularAntiguedad(anoI,mesI,diaI,anoA,mesA,diaA){
-		this.emp.cantiguedad(anoI,mesI,diaI,anoA,mesA,diaA);
+	calcularAntiguedad(ano3,mes3,dia3,ano2,mes2,dia2){
+		this.emp.cantiguedad(ano3,mes3,dia3,ano2,mes2,dia2);
 	}
 
 	calcularPrestaciones(presS,presA){
 		this.emp.cprestaciones(presS,presA);
 	}
 
-	calcularSAnual(sasal){
-		this.emp.csanual(sasal);
-	}
-
-	calcularPrima(pri){
-		this.emp.cprimaconst(pri);
-	}
-
-	calcularPrim(prim,pris){
-		this.emp.cprimavar(prim,pris);
-	}
-
+	
 }
 
-class Empleado{
+class Datos{
 	constructor(nomre,apellido,sexo){
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.sexo = sexo;
-		this.nacimiento = 0;
-		this.ingreso = 0;
-		this.sala = 0;
-		this.calculoEdad = 0;
-		this.calculoAntiguedad = 0;
-		this.calculoPrestaciones = 0;
-		this.calculoSAnual = 0;
-		this.calculoPrima = 0;
-		this.calculoPrimav = 0;
-
+		this.nacimiento ;
+		this.ingreso ;
+		this.sala ;
+		this.calculoEdad ;
+		this.calculoAntiguedad ;
+		this.calculoPrestaciones ;
+		
 
 	}
 
@@ -93,22 +80,20 @@ class Empleado{
 
 	
 
-	
-
 	csalario(sal){
 		this.salario = sal;
 	}
 
-	cedad(anoN,mesN,diaN,anoA,mesA,diaA){
-		let eda = anoA - anoN;
-		if (mesA > mesN) {
+	cedad(ano1,mes1,dia1,ano2,mes2,dia2){
+		let eda = ano2 - ano1;
+		if (mes2 > mes1) {
 			eda--;
 	        this.calculoEdad = eda+1;
-	    } else if (mesA < mesN) {
+	    } else if (mes2 < mes1) {
 	        	eda--;
 	            this.calculoEdad = eda;
-	        }else if(mesA == mesN){
-	        		if (diaA < diaN) {
+	        }else if(mes2 == mes1){
+	        		if (dia2 < dia1) {
 	        			eda--;
 	            		this.calculoEdad = eda;
 	    			} else{
@@ -118,16 +103,16 @@ class Empleado{
 	    	}
 	}
 
-	cantiguedad(anoI,mesI,diaI,anoA,mesA,diaA){
-		let anti = anoA - anoI;
-		if (mesA > mesI) {
+	cantiguedad(ano3,mes3,dia3,ano2,mes2,dia2){
+		let anti = ano2 - ano3;
+		if (mes2 > mes3) {
 			anti--;
 	        this.calculoAntiguedad = anti+1;
-	    } else if (mesA < mesI) {
+	    } else if (mes2 < mes3) {
 	        	anti--;
 	            this.calculoAntiguedad = anti;
-	        }else if(mesA == mesI){
-	        		if (diaA < diaI) {
+	        }else if(mes2 == mes3){
+	        		if (dia2 < dia3) {
 	        			anti--;
 	            		this.calculoAntiguedad = anti;
 	    			} else{
@@ -139,36 +124,17 @@ class Empleado{
 
 	cprestaciones(presS,presA){
 		this.calculoPrestaciones = (presS*presA)/12;
+	
+	
 	}
-
-	csanual(sasal){
-		this.calculoSAnual = sasal*12;
-	}
-
-	cprimaconst(pri){
-		this.calculoPrima = (pri*180)/360;
-	}
-
-	cprimavar(prim,pris){
-		if(pris!=0){	
-			if(pris>0 && pris<180){
-				this.calculoPrimav = (prim*pris)/360;
-			}else {
-				alert("Datos incorrectos, debe ser menos de 180 dias");
-			}
-		} else{
-			alert("Debe llenar todos los campos");
-		}
-	}
-
 }
 
-let cal = new Calculos();
+let cal = new Funcion();
 
 function salarioM(){
 	let sala = document.getElementById('salario').value;
 	cal.modSalario(parseInt(sala));
-	const s = cal.darEmpleado().darSalario();
+	const s = cal.darDatos().darSalario();
 	alert('Nuevo salario $'+sala);
 }
 
@@ -184,7 +150,7 @@ function calEdad(){
     const diaActual = parseInt(fechaActual.getDate());
 
     cal.calcularEdad(anoNacimiento, mesNacimiento, diaNacimiento, anoActual, mesActual, diaActual);
-    let e = cal.darEmpleado().darCalculoEdad();
+    let e = cal.darDatos().darCalculoEdad();
     document.getElementById('cal_edad').value = e;   
 }
 
@@ -200,9 +166,20 @@ function calAntiguedad(){
     const diaActual = parseInt(fechaActual.getDate());
 
     cal.calcularAntiguedad(anoIngreso, mesIngreso, diaIngreso, anoActual, mesActual, diaActual);
-    let a = cal.darEmpleado().darCalculoAntiguedad();
+    let a = cal.darDatos().darCalculoAntiguedad();
     document.getElementById('cal_anti').value = a;
 }
+
+function calPrestaciones(){
+	let psal = document.getElementById("salario").value;
+	let pant = document.getElementById("cal_anti").value;
+	cal.calcularPrestaciones(psal, pant);
+	const p = cal.darDatos().darCalculoPrestaciones();
+	document.getElementById('cal_pres').value = p;
+}
+
+
+
 
 
 
